@@ -22,12 +22,20 @@ type Combinable = string | number;
 type Numeric = number | boolean;
 type Universal = Combinable & Numeric;
 
+function add(a: string, b: string): string;//Function Overloading, also you can change parameters as well
+function add(a: number, b:number): number;//Function Overloading, also you can change parameters as well
 function add(a: Combinable, b: Combinable) {
     if (typeof a === 'string' || typeof b === 'string') {
         return a.toString() + b.toString();
     }
     return a + b;
 }
+
+const result = add(1, 2);
+console.log('Result is: ' + result);
+
+const resultString = add('Abhijeet', ' Kulshreshtha');
+console.log('yahoo '+ resultString.split(' '));
 
 type UnknownEmployee = Employee | Admin;
 
