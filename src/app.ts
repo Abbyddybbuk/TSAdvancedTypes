@@ -108,3 +108,27 @@ const inputElement = document.getElementById('user-input');
 if (inputElement) {
     (inputElement as HTMLInputElement).value = 'Hello Abhijeet!';
 }
+
+interface ErrorStringContainer {
+    [prop: string]: string;//This is an index property which means any property of type string can be added e.g. email, name etc.
+}
+
+interface ErrorNumberContainer {
+    [prop: number]: string;//This is an index property which means any property of type number can be added e.g. email, name etc.
+}
+
+const errors: ErrorStringContainer = {
+    email: 'Email not valid'
+};
+
+const errors1: ErrorStringContainer = {
+    name: 'Email not valid'
+};
+
+const errors2: ErrorStringContainer = {
+    companyName: 'Email not valid'
+};
+
+const errors3: ErrorNumberContainer = {
+    1: 'Number not valid'
+};
