@@ -22,6 +22,7 @@ type Combinable = string | number;
 type Numeric = number | boolean;
 type Universal = Combinable & Numeric;
 
+
 function add(a: string, b: string): string;//Function Overloading, also you can change parameters as well
 function add(a: number, b:number): number;//Function Overloading, also you can change parameters as well
 function add(a: Combinable, b: Combinable) {
@@ -140,3 +141,11 @@ const errors2: ErrorStringContainer = {
 const errors3: ErrorNumberContainer = {
     1: 'Number not valid'
 };
+
+const userData = {
+    name: 'Abhijeet',
+    surname: 'Kulshreshtha',
+    job: {title: 'Enterprise Architect', description: 'ABC Labs'}
+}
+
+console.log(userData?.job?.title);//? is Optional property operator
