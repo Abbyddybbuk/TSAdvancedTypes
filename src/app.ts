@@ -149,3 +149,6 @@ const userData = {
 }
 
 console.log(userData?.job?.title);//? is Optional property operator
+const testInput = undefined;
+const storedData = testInput ?? 'DEFAULT';
+console.log(storedData);
